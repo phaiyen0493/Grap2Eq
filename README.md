@@ -1,1 +1,1 @@
-# Grap2Eq
+# Diffusion-based Grap2Eq
