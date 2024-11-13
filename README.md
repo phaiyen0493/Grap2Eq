@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation for Grap2Eq.
 
 ## Comparison with SOTA methods on In-the-Wild videos
 
-https://github.com/user-attachments/assets/43d5bb44-4431-4113-94b4-fc1896bcc645
+https://github.com/user-attachments/assets/9e00002e-0839-4aae-bb6e-b27027bc3b1e
 
 ## Dependencies
 Make sure you have the following dependencies installed (python):
