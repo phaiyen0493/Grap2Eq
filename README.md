@@ -4,7 +4,7 @@ This repository contains the PyTorch implementation for Grap2Eq.
 
 ![Grap2Eq](https://github.com/user-attachments/assets/809a3530-cefa-4d5b-beaf-8750f19b7bb9)
 
-## Comparison with SOTA methods on In-the-Wild videos:
+## Comparison with SOTA methods on In-the-Wild videos
 
 https://github.com/user-attachments/assets/43d5bb44-4431-4113-94b4-fc1896bcc645
 
@@ -78,6 +78,15 @@ python main_3dhp.py -c checkpoint/model_3dhp -gpu 0 --nolog --evaluate <epoch_na
 After that, the predicted 3D poses under P-Best, P-Agg, J-Best, J-Agg settings are saved as four files (`.mat`) in `./checkpoint`. To get the MPJPE, AUC, PCK metrics, you can evaluate the predictions by running a Matlab script `./3dhp_test/test_util/mpii_test_predictions_ori_py.m` (you can change 'aggregation_mode' in line 29 to get results under different settings). Then, the evaluation results are saved in `./3dhp_test/test_util/mpii_3dhp_evaluation_sequencewise_ori_{setting name}_t{iteration index}.csv`. You can manually average the three metrics in these files over six sequences to get the final results.
 
 ### HumanEva-I
+To train our model using the ground truth 2D poses as inputs, please run:
+```bash
+python main_humaneva.py -k gt -c 'checkpoint/humaneva_gt' -a 'Walk,Jog' -gpu 0 --nolog
+```
+
+To evaluate our Grap2Eq using the ground truth 2D poses as inputs, please run:
+```bash
+python main_humaneva.py -k gt -c 'checkpoint/humaneva_gt' -a 'Walk,Jog' -gpu 0 --nolog --evaluate <epoch_name> --by-subject -num_proposals 20 -sampling_timesteps 10 --p2
+```
 
 ### Pretrained Models
 [Google Drive]()
