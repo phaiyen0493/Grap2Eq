@@ -96,6 +96,9 @@ Our code refers to the following repositories.
 * [MotionDiffuse](https://github.com/mingyuan-zhang/MotionDiffuse)
 * [D3DP](https://github.com/paTRICK-swk/D3DP)
 * [MixSTE](https://github.com/JinluZhang1126/MixSTE)
+* [FinePOSE](https://github.com/PKU-ICST-MIPL/FinePOSE_CVPR2024)
+* [KTPFormer](https://github.com/JihuaPeng/KTPFormer)
+* [MotionAGFormer](https://github.com/TaatiTeam/MotionAGFormer)
 
 We thank the authors for releasing their codes.
 
