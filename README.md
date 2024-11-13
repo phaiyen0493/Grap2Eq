@@ -9,7 +9,6 @@ Comparison with SOTA methods on In-the-Wild videos:
 https://github.com/user-attachments/assets/43d5bb44-4431-4113-94b4-fc1896bcc645
 
 ## Dependencies
-Trained on 1*NVIDIA RTX 4090.
 Make sure you have the following dependencies installed (python):
 
 * pytorch >= 0.4.0
@@ -39,7 +38,12 @@ We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK
 We set up the HumanEva-I dataset similar to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md). You can download the 2D ground truths from [here](https://drive.google.com/file/d/1UuW6iTdceNvhjEY2rFF9mzW93Fi1gMtz/view), and the 3D ground truths from [here](https://drive.google.com/file/d/1CtAJR_wTwfh4rEjQKKmABunkyQrvZ6tu/view). `data_2d_humaneva15_gt.npz` is the ground truth of 2D keypoints. `data_3d_humaneva15.npz` is the ground truth of 3D human joints. Put them in the `./data` directory.
 
 ## Training and Evaluation
+
+We trained our models on 1*NVIDIA RTX 4090.
+
 ### Human3.6M
+
+#### 2D CPN inputs
 To train our model using the 2D keypoints obtained by CPN as inputs, please run:
 ```bash
 python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog
@@ -50,6 +54,7 @@ To evaluate our Grap2Eq using the 2D keypoints obtained by CPN as inputs, please
 python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10 --p2
 ```
 
+#### 2D ground truth inputs
 To train our model using the 2D ground truth keypoints as inputs, please run:
 ```bash
 python main_h36m.py -k gt -c checkpoint/h36m_gt -gpu 0 --nolog --save_lmin 21 --save_lmax 23
