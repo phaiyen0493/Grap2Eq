@@ -1,6 +1,6 @@
 # Diffusion-based Grap2Eq
 
-![Grap2Eq](https://github.com/user-attachments/assets/267edb84-523e-4316-bc7b-21c4a4805723)
+![Grap2Eq](https://github.com/user-attachments/assets/809a3530-cefa-4d5b-beaf-8750f19b7bb9)
 
 Comparison with SOTA methods on In-the-Wild videos:
 
