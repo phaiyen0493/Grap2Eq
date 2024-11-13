@@ -51,7 +51,7 @@ python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog
 
 To evaluate our Grap2Eq using the 2D keypoints obtained by CPN as inputs, please run:
 ```bash
-python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10 --p2
+python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog --evaluate <checkpoint_file> -num_proposals 20 -sampling_timesteps 10 --p2
 ```
 
 #### 2D ground truth inputs
@@ -62,7 +62,7 @@ python main_h36m.py -k gt -c checkpoint/h36m_gt -gpu 0 --nolog --save_lmin 21 --
 
 To evaluate our Grap2Eq using the 2D ground truth keypoints as inputs, please run:
 ```bash
-python main_h36m.py -k gt -c checkpoint/h36m_gt -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10 --p2
+python main_h36m.py -k gt -c checkpoint/h36m_gt -gpu 0 --nolog --evaluate <checkpoint_file> -num_proposals 20 -sampling_timesteps 10 --p2
 ```
 
 ### MPI-INF-3DHP
@@ -73,7 +73,7 @@ python main_3dhp.py -c checkpoint/3dhp -gpu 0 --nolog
 
 To evaluate our Grap2Eq using the ground truth 2D poses as inputs, please run:
 ```bash
-python main_3dhp.py -c checkpoint/model_3dhp -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10
+python main_3dhp.py -c checkpoint/model_3dhp -gpu 0 --nolog --evaluate <checkpoint_file> -num_proposals 20 -sampling_timesteps 10
 ```
 After that, the predicted 3D poses under P-Best, P-Agg, J-Best, J-Agg settings are saved as four files (`.mat`) in `./checkpoint`. To get the MPJPE, AUC, PCK metrics, you can evaluate the predictions by running a Matlab script `./3dhp_test/test_util/mpii_test_predictions_ori_py.m` (you can change 'aggregation_mode' in line 29 to get results under different settings). Then, the evaluation results are saved in `./3dhp_test/test_util/mpii_3dhp_evaluation_sequencewise_ori_{setting name}_t{iteration index}.csv`. You can manually average the three metrics in these files over six sequences to get the final results.
 
@@ -85,7 +85,7 @@ python main_humaneva.py -k gt -c 'checkpoint/humaneva_gt' -a 'Walk,Jog' -gpu 0 -
 
 To evaluate our Grap2Eq using the ground truth 2D poses as inputs, please run:
 ```bash
-python main_humaneva.py -k gt -c 'checkpoint/humaneva_gt' -a 'Walk,Jog' -gpu 0 --nolog --evaluate <epoch_name> --by-subject -num_proposals 20 -sampling_timesteps 10 --p2
+python main_humaneva.py -k gt -c 'checkpoint/humaneva_gt' -a 'Walk,Jog' -gpu 0 --nolog --evaluate <checkpoint_file> --by-subject -num_proposals 20 -sampling_timesteps 10 --p2
 ```
 
 ### Pretrained Models
