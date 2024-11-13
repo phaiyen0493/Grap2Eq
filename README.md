@@ -9,7 +9,7 @@ Comparison with SOTA methods on In-the-Wild videos:
 https://github.com/user-attachments/assets/43d5bb44-4431-4113-94b4-fc1896bcc645
 
 ## Dependencies
-
+Trained on 1*NVIDIA RTX 4090.
 Make sure you have the following dependencies installed (python):
 
 * pytorch >= 0.4.0
@@ -35,6 +35,52 @@ We set up the Human3.6M dataset in the same way as [VideoPose3D](https://github.
 ### MPI-INF-3DHP
 We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK-swk/P-STMO) and [D3DP](https://github.com/paTRICK-swk/D3DP/tree/main). You can download our processed data from [here](https://drive.google.com/file/d/1zOM_CvLr4Ngv6Cupz1H-tt1A6bQPd_yg/view?usp=share_link). Put them in the `./data` directory. 
 
-### HumanEva
-We set up the HumanEva dataset similar to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md). You can download the 2D ground truths from [here](https://drive.google.com/file/d/1UuW6iTdceNvhjEY2rFF9mzW93Fi1gMtz/view), and the 3D ground truths from [here](https://drive.google.com/file/d/1CtAJR_wTwfh4rEjQKKmABunkyQrvZ6tu/view). `data_2d_humaneva15_gt.npz` is the ground truth of 2D keypoints. `data_3d_h36m.npz` is the ground truth of 3D human joints. Put them in the `./data` directory.
+### HumanEva-I
+We set up the HumanEva-I dataset similar to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md). You can download the 2D ground truths from [here](https://drive.google.com/file/d/1UuW6iTdceNvhjEY2rFF9mzW93Fi1gMtz/view), and the 3D ground truths from [here](https://drive.google.com/file/d/1CtAJR_wTwfh4rEjQKKmABunkyQrvZ6tu/view). `data_2d_humaneva15_gt.npz` is the ground truth of 2D keypoints. `data_3d_humaneva15.npz` is the ground truth of 3D human joints. Put them in the `./data` directory.
+
+### Human3.6M
+To train our model using the 2D keypoints obtained by CPN as inputs, please run:
+```bash
+python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog
+```
+
+To evaluate our Grap2Eq using the 2D keypoints obtained by CPN as inputs, please run:
+```bash
+python main_h36m.py -k cpn_ft_h36m_dbb -c checkpoint/h36m -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10 --p2
+```
+
+To train our model using the 2D ground truth keypoints as inputs, please run:
+```bash
+python main_h36m.py -k gt -c checkpoint/h36m_gt -gpu 0 --nolog --save_lmin 21 --save_lmax 23
+```
+
+To evaluate our Grap2Eq using the 2D ground truth keypoints as inputs, please run:
+```bash
+python main_h36m.py -k gt -c checkpoint/h36m_gt -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10 --p2
+```
+
+### MPI-INF-3DHP
+To train our model using the ground truth 2D poses as inputs, please run:
+```bash
+python main_3dhp.py -c checkpoint/3dhp -gpu 0 --nolog
+```
+
+To evaluate our Grap2Eq using the ground truth 2D poses as inputs, please run:
+```bash
+python main_3dhp.py -c checkpoint/model_3dhp -gpu 0 --nolog --evaluate <epoch_name> -num_proposals 20 -sampling_timesteps 10
+```
+After that, the predicted 3D poses under P-Best, P-Agg, J-Best, J-Agg settings are saved as four files (`.mat`) in `./checkpoint`. To get the MPJPE, AUC, PCK metrics, you can evaluate the predictions by running a Matlab script `./3dhp_test/test_util/mpii_test_predictions_ori_py.m` (you can change 'aggregation_mode' in line 29 to get results under different settings). Then, the evaluation results are saved in `./3dhp_test/test_util/mpii_3dhp_evaluation_sequencewise_ori_{setting name}_t{iteration index}.csv`. You can manually average the three metrics in these files over six sequences to get the final results.
+
+
+### Pretrained Models
+[Google Drive]()
+
+## Acknowledgement
+Our code refers to the following repositories.
+* [MotionDiffuse](https://github.com/mingyuan-zhang/MotionDiffuse)
+* [D3DP](https://github.com/paTRICK-swk/D3DP)
+* [MixSTE](https://github.com/JinluZhang1126/MixSTE)
+
+We thank the authors for releasing their codes.
+
 
