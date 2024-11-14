@@ -1,6 +1,6 @@
-# Diffusion-based Grap2Eq
+# Grap2Eq
 
-This repository contains the PyTorch implementation for Grap2Eq.
+This repository contains the PyTorch implementation for diffusion-based Grap2Eq.
 
 ![Grap2Eq](https://github.com/user-attachments/assets/04654725-04e8-4d2c-95a9-2c34f654b074)
 
