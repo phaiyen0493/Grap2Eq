@@ -8,7 +8,7 @@ This repository contains the PyTorch implementation for Grap2Eq.
 
 Check out our video:
 
-https://github.com/user-attachments/assets/b0472c93-661e-46ab-92a5-4c04bc4213bb
+![Grap2Eq_video] (https://github.com/user-attachments/assets/b0472c93-661e-46ab-92a5-4c04bc4213bb)
 
 ## Dependencies
 Make sure you have the following dependencies installed (python):
@@ -101,6 +101,7 @@ Our code refers to the following repositories.
 * [FinePOSE](https://github.com/PKU-ICST-MIPL/FinePOSE_CVPR2024)
 * [KTPFormer](https://github.com/JihuaPeng/KTPFormer)
 * [MotionAGFormer](https://github.com/TaatiTeam/MotionAGFormer)
+* [MotionBERT](https://github.com/Walter0807/MotionBERT)
 
 We thank the authors for releasing their codes.
 
