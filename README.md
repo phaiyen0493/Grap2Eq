@@ -8,7 +8,7 @@ This repository contains the PyTorch implementation for Grap2Eq.
 
 Check out our video:
 
-![Grap2Eq_video] (https://github.com/user-attachments/assets/b0472c93-661e-46ab-92a5-4c04bc4213bb)
+[Grap2Eq_video] (https://github.com/user-attachments/assets/b0472c93-661e-46ab-92a5-4c04bc4213bb)
 
 ## Dependencies
 Make sure you have the following dependencies installed (python):
