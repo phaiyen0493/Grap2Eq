@@ -44,7 +44,7 @@ Put them in the `./data` directory.
 ### MPI-INF-3DHP
 We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK-swk/P-STMO) and [D3DP](https://github.com/paTRICK-swk/D3DP/tree/main). You can download our processed data from here:
 
-[data_ori_3dhp.rar](https://drive.google.com/file/d/1zOM_CvLr4Ngv6Cupz1H-tt1A6bQPd_yg/view?usp=share_link) includes both ground truth 2D and 3D poses (officially called "annot3").
+[`data_ori_3dhp.rar`](https://drive.google.com/file/d/1zOM_CvLr4Ngv6Cupz1H-tt1A6bQPd_yg/view?usp=share_link) includes both ground truth 2D and 3D poses (officially called "annot3").
 
 Put them in the `./data` directory. 
 
