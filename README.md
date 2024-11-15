@@ -41,7 +41,8 @@ python run.py -k cpn_ft_h36m_dbb -f 243 -s 243 -l log/run -c checkpoint -gpu 0
 ```
 
 To evaluate our Grap2Eq using the 2D keypoints obtained by CPN as inputs, please run:
-```bashpython run.py -k cpn_ft_h36m_dbb -c <checkpoint_path> --evaluate <checkpoint_file> -f 243 -s 243
+```bash
+python run.py -k cpn_ft_h36m_dbb -c <checkpoint_path> --evaluate <checkpoint_file> -f 243 -s 243
 ```
 ## Acknowledgement
 Our code refers to the following repositories.
