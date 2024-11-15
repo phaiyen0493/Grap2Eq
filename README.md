@@ -35,7 +35,13 @@ Put them in the `./data` directory.
 We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK-swk/P-STMO). You can download the processed data from [here](https://drive.google.com/file/d/11eBe175Rgj6IYrwZwa1oXTOyHPxGuWyi/view). Put them in the `./data` directory. 
 
 ### HumanEva-I
-We set up the HumanEva-I dataset similar to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md). You can download the 2D ground truths from [here](https://drive.google.com/file/d/1UuW6iTdceNvhjEY2rFF9mzW93Fi1gMtz/view), and the 3D ground truths from [here](https://drive.google.com/file/d/1CtAJR_wTwfh4rEjQKKmABunkyQrvZ6tu/view). `data_2d_humaneva15_gt.npz` is the ground truth of 2D keypoints. `data_3d_humaneva15.npz` is the ground truth of 3D human joints. Put them in the `./data` directory.
+We set up the HumanEva-I dataset similar to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md). You can download the processed data from here:
+
+[`data_2d_humaneva15_gt.npz`](https://drive.google.com/file/d/1UuW6iTdceNvhjEY2rFF9mzW93Fi1gMtz/view) is the ground truth of 2D keypoints. 
+
+[`data_3d_humaneva15.npz`](https://drive.google.com/file/d/1CtAJR_wTwfh4rEjQKKmABunkyQrvZ6tu/view) is the ground truth of 3D human joints. 
+
+Put them in the `./data` directory.
 
 ## Training and Evaluation
 
