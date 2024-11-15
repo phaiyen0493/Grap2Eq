@@ -34,7 +34,7 @@ Put them in the `./data` directory.
 ### MPI-INF-3DHP
 We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK-swk/P-STMO). You can download the processed data from here:
 
-[data_3dhp.rar](https://drive.google.com/file/d/11eBe175Rgj6IYrwZwa1oXTOyHPxGuWyi/view), which include both ground truth 2d and 3D poses. The 3D poses were scaled to the height of the universal skeleton used by Human3.6M (officially called "univ_annot3").
+[`data_3dhp.rar`](https://drive.google.com/file/d/11eBe175Rgj6IYrwZwa1oXTOyHPxGuWyi/view) includes both ground truth 2d and 3D poses. The 3D poses were scaled to the height of the universal skeleton used by Human3.6M (officially called "univ_annot3").
 
 Put them in the `./data` directory. 
 
