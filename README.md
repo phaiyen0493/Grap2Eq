@@ -16,8 +16,6 @@ Make sure you have the following dependencies installed (python):
 pip install git+https://github.com/openai/CLIP.git
 ```
 
-You should download [MATLAB](https://www.mathworks.com/products/matlab-online.html) if you want to evaluate our model on MPI-INF-3DHP dataset.
-
 ## Datasets
 
 Our method is quantitatively evaluated on [Human3.6M](http://vision.imar.ro/human3.6m), [MPI-INF-3DHP](https://vcai.mpi-inf.mpg.de/3dhp-dataset/) and [HumanEva](http://humaneva.is.tue.mpg.de/) datasets. 
