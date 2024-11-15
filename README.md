@@ -2,6 +2,8 @@
 
 This repository contains the PyTorch implementation for non-diffusion-based Grap2Eq.
 
+![Grap2Eq_non_diffusion](https://github.com/user-attachments/assets/6281cbe1-e23d-4aa1-b79f-9d6dcfe05842)
+
 ## Dependencies
 Make sure you have the following dependencies installed (python):
 
