@@ -32,7 +32,11 @@ We set up the Human3.6M dataset in the same way as [VideoPose3D](https://github.
 Put them in the `./data` directory.
 
 ### MPI-INF-3DHP
-We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK-swk/P-STMO). You can download the processed data from [here](https://drive.google.com/file/d/11eBe175Rgj6IYrwZwa1oXTOyHPxGuWyi/view). Put them in the `./data` directory. 
+We set up the MPI-INF-3DHP dataset following [P-STMO](https://github.com/paTRICK-swk/P-STMO). You can download the processed data from here:
+
+[data_3dhp.rar](https://drive.google.com/file/d/11eBe175Rgj6IYrwZwa1oXTOyHPxGuWyi/view), which include both ground truth 2d and 3D poses. The 3D poses were scaled to the height of the universal skeleton used by Human3.6M (officially called "univ_annot3").
+
+Put them in the `./data` directory. 
 
 ### HumanEva-I
 We set up the HumanEva-I dataset similar to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md). You can download the processed data from here:
